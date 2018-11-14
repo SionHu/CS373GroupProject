@@ -9,6 +9,8 @@ current_dir = '<Your Dataset Path>'
 
 # k fold validation, k = 5
 # Percentage of images to be used for the test set
+kfold=5;
+
 percentage_test = 10;
 
 # Create and/or truncate train.txt and test.txt
