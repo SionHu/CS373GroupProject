@@ -50,7 +50,7 @@ kf = KFold(n_splits=2, shuffle=True, random_state=42) #=4
 
 for train_index, test_index in kf.split(X):
     i += 1
-    print('KFold Iteration: {}'.format(i))
+    print('KFold: ' + str(i))
     X_train, X_test = X[train_index], X[test_index]
     y_train, y_test = y[train_index], y[test_index]
 
@@ -65,7 +65,7 @@ for train_index, test_index in kf.split(X):
     # dataset): unsupervised feature extraction / dimensionality reduction
     n_components = 150
 
-    print("Extracting the top %d eigenfaces from %d faces"
+    print("\nExtracting the top %d eigenfaces from %d faces"
           % (n_components, X_train.shape[0]))
     t0 = time()
     pca = PCA(n_components=n_components, svd_solver='randomized',
@@ -93,7 +93,7 @@ for train_index, test_index in kf.split(X):
     clf = clf.fit(X_train_pca, y_train)
     print("done in %0.3fs" % (time() - t0))
     #print("Best estimator found by grid search:")
-    #print(clf.best_estimator_)
+    print(clf.best_estimator_)
 
 
     # #############################################################################
@@ -149,59 +149,53 @@ for train_index, test_index in kf.split(X):
 
 #test part#############################
 #######################################
-lfw_people2 = fetch_lfw_people(min_faces_per_person=1, resize=0.4, data_home='test')
+lfw_people2 = fetch_lfw_people(min_faces_per_person=1, resize=0.4, data_home='test', download_if_missing=False)
 
 # introspect the images arrays to find the shapes (for plotting)
-n_samples, h, w = lfw_people2.images.shape
+n_samples2, h2, w2 = lfw_people2.images.shape
 
 # for machine learning we use the 2 data directly (as relative pixel
 # positions info is ignored by this model)
-Z = lfw_people2.data
-n_features = Z.shape[1]
+X2 = lfw_people2.data
+n_features2 = X2.shape[1]
 
 # the label to predict is the id of the person
-zz = lfw_people2.target
-target_names = lfw_people2.target_names
-n_classes = target_names.shape[0]
+y2 = lfw_people2.target
+target_names2 = lfw_people2.target_names
+print("target names are:" + str(target_names2))
+n_classes2 = target_names2.shape[0]
+
 
 print("Total dataset size:")
-print("n_samples: %d" % n_samples)
-print("n_features: %d" % n_features)
-print("n_classes: %d" % n_classes)
+print("n_samples: %d" % n_samples2)
+print("n_features: %d" % n_features2)
+print("n_classes: %d" % n_classes2)
 
-''' #need to fix
-n_components = 3
 
-print("Extracting the top %d eigenfaces from %d faces"
-      % (n_components, X_train.shape[0]))
-t0 = time()
-pca = PCA(n_components=n_components, svd_solver='randomized',
-            whiten=True).fit(X_train)
-    print("done in %0.3fs" % (time() - t0))
-
-    eigenfaces = pca.components_.reshape((n_components, h, w))
-'''
 print("Fitting the classifier to the training set")
-Z_pca = pca.transform(Z)
-
+#n_components=3
+#pca = pca.fit(X2)
+X2_test_pca = pca.transform(X2)
+y2_test = y2
+X2_test = X2
 
 # #############################################################################
 # Quantitative evaluation of the model quality on the test set
 
 print("Predicting people's names on the test set")
 t0 = time()
-Z_pred = clf.predict(Z_pca)
-score = clf.score(Z_pca, zz)
+y2_pred = clf.predict(X2_test_pca)
+score = clf.score(X2_test_pca, y2_test)
 print("Score is: " + str(score))
 #print(clf)
 print("done in %0.3fs" % (time() - t0))
 
 
 
-prediction_titles = [title(Z_pred, zz, target_names, i)
-                     for i in range(Z_pred.shape[0])]
+prediction_titles = [title(y2_pred, y2_test, target_names2, i)
+                     for i in range(y2_pred.shape[0])]
 
-plot_gallery(Z, prediction_titles, h, w)
+plot_gallery(X2_test, prediction_titles, h2, w2)
 
  
 plt.show()
