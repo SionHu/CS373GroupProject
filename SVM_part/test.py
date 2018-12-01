@@ -22,7 +22,9 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 # #############################################################################
 # Download the data, if not already on disk and load it as numpy arrays
 
-lfw_people = fetch_lfw_people(min_faces_per_person=70, resize=0.4, data_home='data')
+lfw_people = fetch_lfw_people(min_faces_per_person=1, resize=0.4, data_home='data', download_if_missing=False)
+print("training model's people names: " + str(lfw_people.target_names))
+print("Training using people images: " + str(lfw_people.data))
 
 # introspect the images arrays to find the shapes (for plotting)
 n_samples, h, w = lfw_people.images.shape
