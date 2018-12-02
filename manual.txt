@@ -33,7 +33,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 **Facenet** [repo](https://github.com/davidsandberg/facenet): `git clone https://github.com/davidsandberg/facenet.git`
 
 - Set environment variable PYTHONPATH that used in facenet: `export PYTHONPATH=[...]/facenet/src`, where `[...]` should be replaced with the directory where the cloned facenet repo resides.
-- For training, put the `datasets` and `Model` folder in the same level of `facenet` repo so that facenet executable could be founded on . 
+- For training, put the `/dataset/datasets` and `Model/models` folder in the same level of `facenet` repo so that facenet executable could be founded on . 
 - Some of the commands can be founded below (**Note**: the commands here are only for reference, running directly might have some issues)
 
     **For more information on training and validating, please refer to [wiki](https://github.com/davidsandberg/facenet/wiki)
@@ -108,7 +108,8 @@ os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 		--lfw_pairs /Users/Sion/Documents/GitHub/datasets/test/test_pair_20.txt \
 		--lfw_batch_size 1 \
 		--lfw_nrof_folds 2`
-
+		
+		(Note: to Change the model training, please change the 20181201-181023 to other folders)
 
 ## 3. SVM 
 Run the svm.py that is located in `SVM_part/`, The pre-processed dataset images using should located in `SVM_part/data/`. Move the preprocessed images data from `dataset/svmdata/` to `source/SVM_part/` and run the python files.
