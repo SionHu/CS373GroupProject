@@ -111,4 +111,9 @@ os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
 
 ## 3. SVM 
-Run the test.py that is located in `SVM_part/`, The pre-processed dataset images using are located in `SVM_part/data/`
+Run the svm.py that is located in `SVM_part/`, The pre-processed dataset images using should located in `SVM_part/data/`. Move the preprocessed images data from `dataset/svmdata/` to `source/SVM_part/` and run the python files.
+
+		### Useful Commands:
+		Python svm.py
+	
+	### During the process of running windows showing the testing images prediction will be popped up at least 5 times, please close the windows to continue running the loop. 
