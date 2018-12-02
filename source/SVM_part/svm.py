@@ -218,7 +218,7 @@ def main():
 
     # Display progress logs on stdout
     logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
-    #SVM_cross_validation(.8) #choose the amount of eigenfaces
+    SVM_cross_validation(.8) #choose the amount of eigenfaces
     SVM_no_cross_validation(.8) #choose the amount of eigenfaces
     
 
