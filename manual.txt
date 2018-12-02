@@ -21,18 +21,25 @@ os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 - Since we have trained two models (Although soon found out the presicions on them were low due to the limiation of tools) in `Model/Set_A` and `Model/Set_B`
 - Put one of the `.weights` model in the root folder of `darknet/` folder, and put `obj.names` and `obj.data` from `Model folder` in `darknet/data/`, and `yolo-obj.cfg` in `darknet/cfg/`.
 - Choose `train*.txt` and `test*.txt` from `kfoldtxt/` folder and copy to `darknet/` repo, where **'*'** is the same letter from _'A'_ to _'E'_. These two files will tell darknet to find the images used for training and testing. 
-- Copy all the images and txt files in `Images/001/` to `darknet/data/Bush`, note if there is no such folder simplely create one.
+- Copy all the images and txt files in `dataset/Images/001/` to `darknet/data/Bush`, note if there is no such folder simplely create one.
 
     **For information on how to train or detect, please refer to _readme.md_ from this [repo](https://github.com/AlexeyAB/darknet)** 
+	Useful commands
 
 ## 2. Facenet 
 **Facenet** [repo](https://github.com/davidsandberg/facenet): ` git clone https://github.com/davidsandberg/facenet.git`
 
 - Set environment variable PYTHONPATH that used in facenet: `export PYTHONPATH=[...]/facenet/src`, where `[...]` should be replaced with the directory where the cloned facenet repo resides.
 - For training, put the `datasets` and `Model` folder in the same level of `facenet` repo so that facenet executable could be founded on . 
-- Some of the commands can be founded in `commands.sh` command. (**Note**: the shell script is used only for reference, running directly might have some issues)
+- Some of the commands can be founded below (**Note**: the commands here are only for reference, running directly might have some issues)
 
     **For more information on training and validating, please refer to [wiki](https://github.com/davidsandberg/facenet/wiki)
+	
+	Useful commands:
+	
+		- Building a model(.pb) from metadata: python src/freeze_graph.py ../models/facenet1/%latest path that contains metadata%/ %absolute_Path/*.pb --> * is the filename of your favorite
+		
+		- 
 
 ## 3. SVM 
 Run the test.py that is located in `SVM_part/`, The pre-processed dataset images using are located in `SVM_part/data/`
