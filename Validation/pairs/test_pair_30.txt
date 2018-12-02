@@ -1,0 +1,121 @@
+2	30
+Ariel_Sharon	29	45
+Ariel_Sharon	8	41
+Ariel_Sharon	16	21
+Ariel_Sharon	21	29
+Ariel_Sharon	7	40
+Ariel_Sharon	16	39
+Ariel_Sharon	3	37
+Ariel_Sharon	3	36
+George_HW_Bush	8	10
+George_HW_Bush	4	7
+George_HW_Bush	2	9
+George_HW_Bush	5	10
+George_HW_Bush	3	5
+George_HW_Bush	2	3
+George_HW_Bush	6	7
+George_HW_Bush	3	7
+George_HW_Bush	3	6
+George_HW_Bush	3	10
+George_HW_Bush	5	6
+John_Ashcroft	13	28
+John_Ashcroft	24	29
+John_Ashcroft	17	29
+John_Ashcroft	20	21
+John_Ashcroft	13	18
+John_Ashcroft	15	20
+John_Ashcroft	12	18
+John_Ashcroft	4	26
+John_Ashcroft	21	30
+John_Ashcroft	25	30
+John_Ashcroft	9	11
+Ariel_Sharon	33	John_Ashcroft	21
+Ariel_Sharon	15	George_HW_Bush	5
+Ariel_Sharon	15	George_HW_Bush	2
+Ariel_Sharon	30	John_Ashcroft	21
+Ariel_Sharon	34	John_Ashcroft	14
+Ariel_Sharon	16	George_HW_Bush	9
+Ariel_Sharon	16	George_HW_Bush	2
+Ariel_Sharon	41	John_Ashcroft	14
+Ariel_Sharon	25	John_Ashcroft	30
+Ariel_Sharon	32	George_HW_Bush	3
+Ariel_Sharon	47	John_Ashcroft	12
+Ariel_Sharon	19	John_Ashcroft	28
+Ariel_Sharon	6	John_Ashcroft	18
+Ariel_Sharon	38	George_HW_Bush	2
+Ariel_Sharon	25	George_HW_Bush	1
+Ariel_Sharon	10	John_Ashcroft	7
+Ariel_Sharon	15	George_HW_Bush	8
+Ariel_Sharon	19	John_Ashcroft	16
+George_HW_Bush	5	John_Ashcroft	26
+George_HW_Bush	7	John_Ashcroft	26
+George_HW_Bush	2	John_Ashcroft	28
+George_HW_Bush	7	John_Ashcroft	14
+George_HW_Bush	4	John_Ashcroft	25
+George_HW_Bush	1	John_Ashcroft	11
+George_HW_Bush	8	John_Ashcroft	4
+George_HW_Bush	6	John_Ashcroft	7
+George_HW_Bush	1	John_Ashcroft	28
+George_HW_Bush	5	John_Ashcroft	1
+George_HW_Bush	1	John_Ashcroft	18
+George_HW_Bush	8	John_Ashcroft	8
+Bill_Clinton	8	17
+Bill_Clinton	11	14
+Bill_Clinton	2	4
+Bill_Clinton	14	15
+Bill_Clinton	14	16
+Bill_Clinton	16	20
+Bill_Clinton	1	9
+Bill_Clinton	8	15
+Bill_Clinton	4	17
+Bill_Clinton	13	20
+Bill_Clinton	3	19
+Bill_Clinton	15	16
+Bill_Clinton	7	11
+Bill_Clinton	8	10
+Bill_Clinton	15	19
+Bill_Clinton	18	19
+Bill_Clinton	4	10
+George_W_Bush	11	16
+George_W_Bush	22	49
+George_W_Bush	19	20
+George_W_Bush	19	42
+George_W_Bush	7	36
+George_W_Bush	39	47
+George_W_Bush	14	22
+George_W_Bush	22	43
+George_W_Bush	14	34
+George_W_Bush	18	50
+George_W_Bush	8	13
+George_W_Bush	8	38
+George_W_Bush	13	18
+Bill_Clinton	3	George_W_Bush	48
+Bill_Clinton	9	George_W_Bush	2
+Bill_Clinton	14	George_W_Bush	47
+Bill_Clinton	11	George_W_Bush	45
+Bill_Clinton	15	George_W_Bush	39
+Bill_Clinton	10	George_W_Bush	31
+Bill_Clinton	3	George_W_Bush	39
+Bill_Clinton	20	George_W_Bush	24
+Bill_Clinton	13	George_W_Bush	4
+Bill_Clinton	16	George_W_Bush	38
+Bill_Clinton	2	George_W_Bush	28
+Bill_Clinton	3	George_W_Bush	34
+Bill_Clinton	10	George_W_Bush	16
+Bill_Clinton	20	George_W_Bush	18
+Bill_Clinton	7	George_W_Bush	23
+Bill_Clinton	14	George_W_Bush	13
+Bill_Clinton	12	George_W_Bush	18
+Bill_Clinton	7	George_W_Bush	4
+Bill_Clinton	18	George_W_Bush	38
+Bill_Clinton	15	George_W_Bush	47
+Bill_Clinton	9	George_W_Bush	46
+Bill_Clinton	8	George_W_Bush	5
+Bill_Clinton	12	George_W_Bush	25
+Bill_Clinton	5	George_W_Bush	15
+Bill_Clinton	17	George_W_Bush	4
+Bill_Clinton	11	George_W_Bush	22
+Bill_Clinton	5	George_W_Bush	48
+Bill_Clinton	18	George_W_Bush	39
+Bill_Clinton	2	George_W_Bush	44
+Bill_Clinton	3	George_W_Bush	32
