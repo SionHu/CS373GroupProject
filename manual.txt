@@ -19,15 +19,18 @@ os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
 - To run Yolov3 with darkent, the Yolov3 pre-trained model can be downloaded [here](wget https://pjreddie.com/media/files/yolov3.weights)
 - Since we have trained two models (Although soon found out the presicions on them were low due to the limiation of tools) in `Model/Set_A` and `Model/Set_B`
-- Put one of the `.weights` model in the root folder of `darknet/` folder, and put `obj.names` and `obj.data` from `Model folder` in `darknet/data/`, and `yolo-obj.cfg` in `darknet/cfg/`.
+- Put one of the `.weights` model in the root folder of `darknet/` folder, and put `obj.names` and `obj.data` from `Model folder` in `darknet/data/`, and `yolo-obj.cfg` in `darknet/`.
 - Choose `train*.txt` and `test*.txt` from `kfoldtxt/` folder and copy to `darknet/` repo, where **'*'** is the same letter from _'A'_ to _'E'_. These two files will tell darknet to find the images used for training and testing. 
 - Copy all the images and txt files in `dataset/Images/001/` to `darknet/data/Bush`, note if there is no such folder simplely create one.
 
     **For information on how to train or detect, please refer to _readme.md_ from this [repo](https://github.com/AlexeyAB/darknet)** 
-	Useful commands
+	### Useful commands
+	
+	* Running Detector with own weights:
+	darknet detector test data/obj.data yolo-obj.cfg yolo-obj_*.weights, where * is the number of iterations that the .weights got trained.
 
 ## 2. Facenet 
-**Facenet** [repo](https://github.com/davidsandberg/facenet): ` git clone https://github.com/davidsandberg/facenet.git`
+**Facenet** [repo](https://github.com/davidsandberg/facenet): `git clone https://github.com/davidsandberg/facenet.git`
 
 - Set environment variable PYTHONPATH that used in facenet: `export PYTHONPATH=[...]/facenet/src`, where `[...]` should be replaced with the directory where the cloned facenet repo resides.
 - For training, put the `datasets` and `Model` folder in the same level of `facenet` repo so that facenet executable could be founded on . 
@@ -35,14 +38,46 @@ os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
     **For more information on training and validating, please refer to [wiki](https://github.com/davidsandberg/facenet/wiki)
 	
-	Useful commands:
-	
-		- Building a model(.pb) from metadata: python src/freeze_graph.py ../models/facenet1/%latest path that contains metadata%/ %absolute_Path/*.pb --> * is the filename of your favorite
+	### Useful commands:
+	* Making Face Alignment for images by MTCNN:
+		python src/align/align_dataset_mtcnn.py \
+		../datasets/lfw/train \
+		../datasets/lfw_mtcnnpy_160_train \
+		--image_size 160 \
+		--margin 32 \
+		--random_order \
+		--gpu_memory_fraction 0.25 
+		
+	* Training using train_softmax.py:
+		python src/train_softmax.py \
+		--logs_base_dir ../logs/facenet/ \
+		--models_base_dir ../models/facenet1/ \
+		--data_dir ../datasets/lfw_mtcnnpy_160_train/ \
+		--image_size 160 \
+		--model_def models.inception_resnet_v1 \
+		--optimizer ADAM \
+		--learning_rate -1 \
+		--max_nrof_epochs 20 \
+		--keep_probability 0.8 \
+		--random_crop \
+		--random_flip \
+		--use_fixed_image_standardization \
+		--learning_rate_schedule_file data/learning_rate_schedule_classifier_casia.txt \
+		--weight_decay 5e-4 \
+		--embedding_size 512 \
+		--lfw_distance_metric 1 \
+		--lfw_use_flipped_images \
+		--lfw_subtract_mean \
+		--validation_set_split_ratio 0.05 \
+		--validate_every_n_epochs 5 \
+		--prelogits_norm_loss_factor 5e-4 \
+		--batch_size 5 \
+		--gpu_memory_fraction 0.7
+		
+	* Building a model(.pb) from metadata: 
+	python src/freeze_graph.py ../models/facenet1/%latest path that contains metadata%/ %absolute_Path/*.pb --> * is the filename of your favorite
 		
 		- 
 
 ## 3. SVM 
 Run the test.py that is located in `SVM_part/`, The pre-processed dataset images using are located in `SVM_part/data/`
-
-
-
