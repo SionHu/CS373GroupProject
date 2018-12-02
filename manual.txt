@@ -111,9 +111,29 @@ os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
 
 ## 3. SVM 
-Run the svm.py that is located in `SVM_part/`, The pre-processed dataset images using should located in `SVM_part/data/`. Move the preprocessed images data from `dataset/svmdata/` to `source/SVM_part/` and run the python files.
+(run this part in python2 environment is fine)
 
-		### Useful Commands:
-		Python svm.py
+Download sklearn library (if not installed): `sudo pip install -U scikit-learn`
+Move the preprocessed images data from `dataset/svmdata/` to `source/SVM_part/` and run the python files.
+
+Run the svm.py that is located in `SVM_part/`, The pre-processed dataset images using are located in `SVM_part/data/`
+### Useful Commands:
+	Python svm.py
+
+Run SVM with K-Fold cross validation: In the main() function 
+			              uncomment the line `SVM_cross_validation(.8)` 
+    				      comment the line `SVM_no_cross_validation(.8)`
+
+Run SVM without K-Fold cross validation: In the main() function 
+			              comment the line `SVM_cross_validation(.8)` 
+    				      uncomment the line `SVM_no_cross_validation(.8)`
+
+Change n_components of PCA: In the main() function change the `.8` to other value
+                            between 0 to 1 in the line
+                            `SVM_cross_validation(.8)/SVM_no_cross_validation(.8)`
+
+Change n_splits of K-Fold: In the SVM_cross_validation() function
+			   change `8` to other value in the line (50)
+                           `kf = KFold(n_splits = 8, shuffle=True, random_state=42)`
 	
-	### During the process of running windows showing the testing images prediction will be popped up at least 5 times, please close the windows to continue running the loop. 
+### During the process of running windows showing the testing images prediction will be popped up at least 5 times, please close the windows to continue running the loop. 
