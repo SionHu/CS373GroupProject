@@ -78,6 +78,37 @@ os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 	python src/freeze_graph.py ../models/facenet1/%latest path that contains metadata%/ %absolute_Path/*.pb --> * is the filename of your favorite
 		
 		- 
+### Validation
+- The validation files have been generated according to Facenet github, and stored in the folder Validation. The generated files are using the image dataset in "validation_images". However, if user wants to try different datasest, the following are the steps need to be followed: 
+
+* Align the LFW dataset -> test_mtcnnpy_160. An example code is shown below: 
+	python src/align/align_dataset_mtcnn.py \
+		~/Documents/GitHub/datasets/test/raw/ \
+		~/Documents/GitHub/datasets/test/test_mtcnnpy_160 \
+		--image_size 160 \
+		--margin 32 \
+		--random_order \
+		--gpu_memory_fraction 0.25
+
+* Use generate_pairs.txt to generate customized pair.txt -> /pairs. Piars folder contains pairs with different number of (mis)match. For detail of (mis)matc. An example command is shoen as bellow:  
+	python3 generate_pairs.py \
+		--image_dir /Users/Sion/Documents/GitHub/datasets/test/raw/ \
+		--pairs_file_name /Users/Sion/Documents/GitHub/datasets/test/test_pair_20.txt  \
+		--num_folds 2 \
+		--num_matches_mismatches 20
+
+* Validate by testing. Follow the steps on Facenet. An example code is shown as follow: 
+	python src/validate_on_lfw.py  \
+		~/Documents/GitHub/datasets/test/test_mtcnnpy_250 \
+		~/Documents/GitHub/models/20181201-181023 \
+		--distance_metric 1 \
+		--use_flipped_images \
+		--subtract_mean \
+		--use_fixed_image_standardization \
+		--lfw_pairs /Users/Sion/Documents/GitHub/datasets/test/test_pair_20.txt \
+		--lfw_batch_size 1 \
+		--lfw_nrof_folds 2`
+
 
 ## 3. SVM 
 Run the test.py that is located in `SVM_part/`, The pre-processed dataset images using are located in `SVM_part/data/`

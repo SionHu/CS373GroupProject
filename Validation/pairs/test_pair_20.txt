@@ -1,0 +1,81 @@
+2	20
+Ariel_Sharon	9	45
+Ariel_Sharon	1	10
+Ariel_Sharon	19	25
+George_HW_Bush	5	10
+George_HW_Bush	6	9
+George_HW_Bush	3	7
+George_HW_Bush	2	9
+George_HW_Bush	6	10
+John_Ashcroft	1	26
+John_Ashcroft	11	21
+John_Ashcroft	28	29
+John_Ashcroft	17	29
+John_Ashcroft	21	26
+John_Ashcroft	1	14
+John_Ashcroft	8	29
+John_Ashcroft	1	4
+John_Ashcroft	6	27
+John_Ashcroft	26	28
+John_Ashcroft	8	27
+John_Ashcroft	5	23
+Ariel_Sharon	7	George_HW_Bush	9
+Ariel_Sharon	48	George_HW_Bush	3
+Ariel_Sharon	12	George_HW_Bush	4
+Ariel_Sharon	5	George_HW_Bush	1
+Ariel_Sharon	42	John_Ashcroft	26
+Ariel_Sharon	8	George_HW_Bush	4
+Ariel_Sharon	33	George_HW_Bush	4
+Ariel_Sharon	44	George_HW_Bush	5
+Ariel_Sharon	43	George_HW_Bush	10
+Ariel_Sharon	13	George_HW_Bush	2
+Ariel_Sharon	13	John_Ashcroft	23
+Ariel_Sharon	6	George_HW_Bush	8
+Ariel_Sharon	49	George_HW_Bush	9
+Ariel_Sharon	20	John_Ashcroft	10
+Ariel_Sharon	27	George_HW_Bush	4
+Ariel_Sharon	46	John_Ashcroft	8
+Ariel_Sharon	47	George_HW_Bush	7
+George_HW_Bush	2	John_Ashcroft	8
+George_HW_Bush	7	John_Ashcroft	11
+George_HW_Bush	9	John_Ashcroft	27
+Bill_Clinton	9	19
+Bill_Clinton	7	15
+Bill_Clinton	1	5
+Bill_Clinton	14	17
+Bill_Clinton	5	14
+Bill_Clinton	4	9
+Bill_Clinton	6	10
+Bill_Clinton	5	7
+Bill_Clinton	6	14
+Bill_Clinton	13	18
+Bill_Clinton	9	13
+George_W_Bush	14	44
+George_W_Bush	25	30
+George_W_Bush	7	36
+George_W_Bush	6	7
+George_W_Bush	5	26
+George_W_Bush	3	26
+George_W_Bush	16	39
+George_W_Bush	1	25
+George_W_Bush	5	15
+Bill_Clinton	10	George_W_Bush	48
+Bill_Clinton	8	George_W_Bush	17
+Bill_Clinton	3	George_W_Bush	21
+Bill_Clinton	13	George_W_Bush	41
+Bill_Clinton	14	George_W_Bush	49
+Bill_Clinton	15	George_W_Bush	38
+Bill_Clinton	15	George_W_Bush	31
+Bill_Clinton	20	George_W_Bush	33
+Bill_Clinton	7	George_W_Bush	17
+Bill_Clinton	12	George_W_Bush	29
+Bill_Clinton	11	George_W_Bush	50
+Bill_Clinton	19	George_W_Bush	42
+Bill_Clinton	11	George_W_Bush	4
+Bill_Clinton	17	George_W_Bush	16
+Bill_Clinton	7	George_W_Bush	18
+Bill_Clinton	1	George_W_Bush	45
+Bill_Clinton	7	George_W_Bush	28
+Bill_Clinton	11	George_W_Bush	33
+Bill_Clinton	9	George_W_Bush	22
+Bill_Clinton	9	George_W_Bush	19
